@@ -1,10 +1,10 @@
-import { useState } from 'react';
+// import { useState } from 'react';  
 import sun from '../../img/icons/sun.svg';
 import moon from '../../img/icons/moon.svg';
 import './style.css';
 
 const ButtonDarkMode = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {};
 
