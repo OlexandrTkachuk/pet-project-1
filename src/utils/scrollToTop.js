@@ -12,3 +12,5 @@ const ScrollToTop = () => {
 };
 
 export default ScrollToTop;
+
+// Скролить розмітку догори при переході на нову сторінку
