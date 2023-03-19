@@ -1,38 +1,46 @@
-import React from 'react';
+import { NavLink } from 'react-router-dom';
+import ButtonDarkMode from 'components/ButtonDarkMode/ButtonDarkMode';
 import './style.css';
-import sun from '../../img/icons/sun.svg';
-import moon from '../../img/icons/moon.svg';
-import { Link } from 'react-router-dom';
 
 export default function Navigation() {
+  const handleActiveLink = ({ isActive }) => {
+    const activeLink = 'nav-list__link nav-list__link--active';
+    const normalLink = 'nav-list__link';
+
+    if (isActive) {
+      return activeLink;
+    }
+
+    return normalLink;
+  };
+
   return (
     <nav className="nav">
       <div className="container">
         <div className="nav-row">
-          <Link to="/" className="logo">
+          <NavLink to="/" className="logo">
             <strong>Freelancer</strong> portfolio
-          </Link>
+          </NavLink>
 
-          <button className="dark-mode-btn">
-            <img src={sun} alt="Light mode" className="dark-mode-btn__icon" />
-            <img src={moon} alt="Dark mode" className="dark-mode-btn__icon" />
-          </button>
+          <ButtonDarkMode />
 
           <ul className="nav-list">
             <li className="nav-list__item">
-              <Link to="/" className="nav-list__link nav-list__link--active">
+              <NavLink to="/" className={handleActiveLink}>
                 Home
-              </Link>
+              </NavLink>
             </li>
+
             <li className="nav-list__item">
-              <Link to="/projects" className="nav-list__link">
+              <NavLink to="/projects" className={handleActiveLink}>
                 Projects
-              </Link>
+              </NavLink>
             </li>
+
             <li className="nav-list__item">
-              <Link to="contacts" className="nav-list__link">
+              <NavLink to="/contacts" className={handleActiveLink}>
                 Contacts
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

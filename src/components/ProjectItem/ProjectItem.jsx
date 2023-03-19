@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom';
 import './style.css';
 
-const ProjectItem = ({ title, img }) => {
+const ProjectItem = ({ title, img, projectId }) => {
   return (
     <li className="project">
-      <a href="./project-page.html">
+      <Link to={`/projects/${projectId - 1}`}>
         <img src={img} alt={title} className="project__img" />
         <h3 className="project__title">{title}</h3>
-      </a>
+      </Link>
     </li>
   );
 };

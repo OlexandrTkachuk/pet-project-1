@@ -8,9 +8,12 @@ import Projects from 'pages/Projects';
 import ProjectPage from 'pages/ProjectPage';
 import Contacts from 'pages/Contacts';
 
+import ScrollToTop from 'utils/scrollToTop';
+
 export default function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Navigation />
 
       <Routes>
