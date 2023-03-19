@@ -1,4 +1,4 @@
-import Project from 'components/Project/Project';
+import ProjectItem from 'components/ProjectItem/ProjectItem';
 import projects from 'helpers/projectsList';
 
 const Projects = () => {
@@ -10,7 +10,7 @@ const Projects = () => {
 
           <ul className="projects">
             {projects.map(({ title, img, id }) => (
-              <Project key={id} title={title} img={img} />
+              <ProjectItem key={id} title={title} img={img} />
             ))}
           </ul>
         </div>

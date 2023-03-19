@@ -2,15 +2,16 @@ import React from 'react';
 import './style.css';
 import sun from '../../img/icons/sun.svg';
 import moon from '../../img/icons/moon.svg';
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   return (
     <nav className="nav">
       <div className="container">
         <div className="nav-row">
-          <a href="./index.html" className="logo">
+          <Link to="/" className="logo">
             <strong>Freelancer</strong> portfolio
-          </a>
+          </Link>
 
           <button className="dark-mode-btn">
             <img src={sun} alt="Light mode" className="dark-mode-btn__icon" />
@@ -19,22 +20,19 @@ export default function Navigation() {
 
           <ul className="nav-list">
             <li className="nav-list__item">
-              <a
-                href="./index.html"
-                className="nav-list__link nav-list__link--active"
-              >
+              <Link to="/" className="nav-list__link nav-list__link--active">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-list__item">
-              <a href="./projects.html" className="nav-list__link">
+              <Link to="/projects" className="nav-list__link">
                 Projects
-              </a>
+              </Link>
             </li>
             <li className="nav-list__item">
-              <a href="./contacts.html" className="nav-list__link">
+              <Link to="contacts" className="nav-list__link">
                 Contacts
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

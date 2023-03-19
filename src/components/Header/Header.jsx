@@ -11,6 +11,7 @@ export default function Header() {
           </strong>
           <br />a frontend developer
         </h1>
+
         <div className="header__text">
           <p>with passion for learning and creating.</p>
         </div>

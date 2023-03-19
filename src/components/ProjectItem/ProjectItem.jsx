@@ -1,6 +1,6 @@
 import './style.css';
 
-const Project = ({ title, img }) => {
+const ProjectItem = ({ title, img }) => {
   return (
     <li className="project">
       <a href="./project-page.html">
@@ -11,4 +11,4 @@ const Project = ({ title, img }) => {
   );
 };
 
-export default Project;
+export default ProjectItem;
